@@ -13,12 +13,12 @@ const Footer = () => {
           <img
                     alt=""
                     src={Logo}
-                    className="h-40 w-40"
+                    className="h-40 w-44"
                   />
           </h2>
           <p className="text-sm text-gray-600">Feel Free to Shop</p>
           <div className="mt-6">
-            <p className="font-semibold text-gray-800">Subscribe Now</p>
+            <p className="font-semibold text-gray-800">Join Us</p>
             <div className="flex items-center mt-2">
               <input
                 type="email"
@@ -26,7 +26,7 @@ const Footer = () => {
                 className="border border-gray-300 px-3 py-2 rounded-l-md w-full focus:outline-none"
               />
               <button className="bg-black text-white px-4 py-2 rounded-r-md hover:bg-gray-800 transition">
-                Subscribe
+                Submit
               </button>
             </div>
           </div>

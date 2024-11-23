@@ -6,17 +6,17 @@ const Hero = () => {
 
   const images = [
     {
-      src: "https://images.pexels.com/photos/7679863/pexels-photo-7679863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      src: "https://images.bestsellerclothing.in/live/image/catalog/brandstore/bestseller/banners/1920-x-640px-Only-Basic-On-Repeat-HP-web_25092024.jpg",
       text: "Welcome to Our Website",
       link: "#explore1"
     },
     {
-      src: "https://images.pexels.com/photos/2601442/pexels-photo-2601442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      src: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/banner-images/home_Page_1.jpg?format=webp&w=1366&dpr=1.0",
       text: "Shop the Latest Trends",
       link: "#explore2"
     },
     {
-      src: "https://images.pexels.com/photos/3099024/pexels-photo-3099024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      src: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/banner-images/HOMPAGE.jpg?format=webp&w=1366&dpr=1.0",
       text: "Free Delivery on Orders Over $100",
       link: "#explore3"
     }

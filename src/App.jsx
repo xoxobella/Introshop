@@ -7,6 +7,7 @@ import {  Routes, Route } from "react-router-dom";
 import Homepage from "./Pages/Home/Homepage.jsx"
 import About from "./Pages/About/About.jsx" 
 import Create from "./Components/Creatacc/Creatacc.jsx"
+import Store from "./Pages/Store/Store.jsx"
 // import Hero from "./Components/Hero/Hero.jsx"
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <Route path="/" element={<Homepage />} />
       <Route path="Create" element={<Create />} />
       <Route path="About" element={<About />} />
+      <Route path="Store" element={<Store />} />
     </Routes>
       </>
   );

@@ -137,7 +137,7 @@ const navigation = {
   ],
   pages: [
     { name: 'Company', href: '/About' },
-    { name: 'Stores', href: '#' },
+    { name: 'Stores', href: '/Store' },
   ],
 }
 
@@ -300,16 +300,18 @@ export default function Example() {
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
                       <div className="relative flex">
-                        <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:border-indigo-600 data-[open]:text-indigo-600">
+                        <PopoverButton
+                          className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:border-black hover:text-gray-900 data-[open]:border-black data-[open]:text-black"
+                        >
                           {category.name}
                         </PopoverButton>
                       </div>
 
                       <PopoverPanel
                         transition
-                        className="absolute inset-x-0 top-full text-sm text-gray-500 transition data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                        className="absolute inset-x-0 top-full bg-white text-sm text-gray-500 shadow-lg transform opacity-0 scale-95 transition-all duration-200 ease-out data-[open]:opacity-100 data-[open]:scale-100"
                       >
-                        {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
+                        {/* Shadow element for visual effect */}
                         <div aria-hidden="true" className="absolute inset-0 top-1/2 bg-white shadow" />
 
                         <div className="relative bg-white">
@@ -317,13 +319,16 @@ export default function Example() {
                             <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
                               <div className="col-start-2 grid grid-cols-2 gap-x-8">
                                 {category.featured.map((item) => (
-                                  <div key={item.name} className="group relative text-base sm:text-sm">
+                                  <div
+                                    key={item.name}
+                                    className="group relative text-base sm:text-sm transition-transform duration-200 ease-out hover:scale-105"
+                                  >
                                     <img
                                       alt={item.imageAlt}
                                       src={item.imageSrc}
-                                      className="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"
+                                      className="aspect-square w-full rounded-lg bg-gray-100 object-cover transition-opacity duration-200 ease-out group-hover:opacity-75"
                                     />
-                                    <a href={item.href} className="mt-6 block font-medium text-gray-900">
+                                    <a href={item.href} className="mt-6 block font-medium text-gray-900 hover:text-gray-700">
                                       <span aria-hidden="true" className="absolute inset-0 z-10" />
                                       {item.name}
                                     </a>
@@ -346,7 +351,10 @@ export default function Example() {
                                     >
                                       {section.items.map((item) => (
                                         <li key={item.name} className="flex">
-                                          <a href={item.href} className="hover:text-gray-800">
+                                          <a
+                                            href={item.href}
+                                            className="hover:text-gray-800 transition-colors duration-200 ease-out"
+                                          >
                                             {item.name}
                                           </a>
                                         </li>
@@ -361,7 +369,6 @@ export default function Example() {
                       </PopoverPanel>
                     </Popover>
                   ))}
-
                   {navigation.pages.map((page) => (
                     <a
                       key={page.name}
@@ -373,7 +380,6 @@ export default function Example() {
                   ))}
                 </div>
               </PopoverGroup>
-
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
